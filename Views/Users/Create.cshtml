@@ -141,6 +141,32 @@
             alert("아이디 중복검사를 해주세요.")
             return false;
         }
+
+        if (idcheck.length <= 5) {
+            alert("아이디는 최소 6글자 이상이어야합니다.")
+            return false;
+        }
+
+        if (userPw.length <= 5) {
+            alert("비밀번호는 최소 6글자 이상이어야합니다.")
+            return false;
+        }
+
+        var radio_chk = $('input:radio[name=radio]').is(':checked');
+
+        if (radio_chk == false) {
+            alert("학년 반을 선택해 주세요")
+            return false;
+        }
+        var chk_length = $("input:checkbox[name='Checkbox[]']:checked").length;
+
+        출처: https://link2me.tistory.com/1448 [소소한 일상 및 업무TIP 다루기]
+
+        if (chk_length == 0) {
+            alert("과목은 최소 하나 이상은 선택되어야 합니다.")
+            return false;
+        }
+
     }
     function id_overlap_check() {
 
